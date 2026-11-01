@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://www.productosruffo.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.productosruffo.com/">
+<meta property="og:title" content="Productos Ruffo · Tonka Beans from the Venezuelan Amazon">
+<meta property="og:description" content="Hand-gathered tonka beans from the Venezuelan Amazon, dehydrated and exported by Productos Ruffo, C.A. Aromatic and culinary grades.">
+<meta property="og:image" content="https://www.productosruffo.com/ruffo-doypacks.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>html{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Productos Ruffo · Tonka Beans</title>
+<meta name="description" content="Hand-harvested tonka beans from the Venezuelan Amazon, dehydrated and exported by Productos Ruffo, C.A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: brand header, deep-forest hero with the bean drawing, a 4-step origin story, two product cards, lab-quality strip, contact, footer. Waves from the logo divide the sections. */
+:root{
+  --bg:#FAFBF6;
+  --surface:#FFFFFF;
+  --fg:#16220F;
+  --muted:#4A5744;
+  --line:#D9E0D2;
+  --forest:#0B3D0E;
+  --forest-fg:#F3F6EC;
+  --brand:#109B00;
+  --brand-text:#0A6A00;
+  --leaf:#00BE28;
+  --gold:#EBBE27;
+  --gold-text:#7A5E00;
+  --chip:#EEF4E6;
+  --display:'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --body:'Lora', Georgia, 'Times New Roman', serif;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D160C; --surface:#142113; --fg:#EAF0E2; --muted:#AEBBA6; --line:#2A3A27;
+    --forest:#08260A; --forest-fg:#F3F6EC; --brand:#2FBF1F; --brand-text:#6FDB5C;
+    --leaf:#3DDB5E; --gold:#EBBE27; --gold-text:#EBBE27; --chip:#1B2B19;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D160C; --surface:#142113; --fg:#EAF0E2; --muted:#AEBBA6; --line:#2A3A27;
+  --forest:#08260A; --forest-fg:#F3F6EC; --brand:#2FBF1F; --brand-text:#6FDB5C;
+  --leaf:#3DDB5E; --gold:#EBBE27; --gold-text:#EBBE27; --chip:#1B2B19;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--brand-text)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-text)}
+
+/* header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px;flex-wrap:wrap}
+.logo{display:block;width:120px;height:auto}
+.nav{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--display);font-weight:600;font-size:14px}
+.nav a{color:var(--fg);text-decoration:none}
+.nav a:hover{color:var(--brand-text)}
+
+/* hero */
+.hero{background:var(--forest);color:var(--forest-fg)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:center;padding-block:72px 56px}
+.hero-copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-weight:900;font-size:clamp(56px,9vw,112px);line-height:.92;letter-spacing:.01em;color:#FFFFFF}
+.hero h1 span{display:block;color:var(--gold)}
+.hero .sub{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.hero .lede{font-size:19px;max-width:30em;color:#DCE6D3}
+.sci{display:inline-block;align-self:flex-start;background:#FFFFFF;color:#0B3D0E;border-radius:999px;padding:6px 22px;font-family:var(--display);font-weight:700;font-style:italic;font-size:15px}
+.harvest-badge{display:flex;flex-direction:column;gap:2px;align-self:flex-start;border:2px solid var(--gold);border-radius:14px;padding:10px 18px;font-family:var(--display)}
+.harvest-badge b{font-weight:800;font-size:16px;color:var(--gold)}
+.harvest-badge span{font-weight:600;font-size:14px;color:#DCE6D3}
+.fresh{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-bottom:32px;padding:18px 24px;border:2px solid var(--brand);border-radius:16px;background:var(--chip);font-family:var(--display)}
+.fresh b{font-weight:900;font-size:20px;color:var(--brand-text)}
+.fresh span{font-weight:600;font-size:15px;color:var(--fg)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent}
+.btn-gold{background:var(--gold);color:#1B1400}
+.btn-gold:hover{background:#F5D158}
+.btn-ghost{border-color:#FFFFFF;color:#FFFFFF}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-art{display:flex;justify-content:center;min-width:0}
+.hero-art img{width:100%;max-width:620px;height:auto;border-radius:20px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+
+/* waves */
+.waves{display:block;width:100%;height:46px}
+.waves-band{background:var(--forest)}
+
+/* sections */
+section{padding-block:80px}
+.section-head{display:flex;flex-direction:column;gap:12px;max-width:44em;margin-bottom:44px}
+.section-head h2{font-weight:800;font-size:clamp(30px,4.4vw,46px);line-height:1.1}
+.section-head p{color:var(--muted);font-size:18px}
+
+/* story: editorial two-column, a sticky statement beside three chapters split by the logo's wave */
+.story-layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.story-aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px);display:flex;flex-direction:column;gap:24px}
+.story-aside h2{font-weight:900;font-size:clamp(32px,4.6vw,52px);line-height:1.04}
+.story-aside h2 em{font-style:normal;color:var(--brand-text)}
+.story-aside img{width:100%;max-width:360px;height:auto}
+:root[data-theme="dark"] .story-aside img{filter:invert(1)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .story-aside img{filter:invert(1)}}
+.chapters{display:flex;flex-direction:column;gap:0;min-width:0}
+.chapter{display:flex;flex-direction:column;gap:12px;padding-block:28px}
+.chapter h3{font-weight:800;font-size:clamp(22px,2.6vw,28px)}
+.chapter .kicker{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
+.chapter p{color:var(--muted);font-size:18px;max-width:34em}
+.chapter-wave{display:block;width:140px;height:18px}
+.story-quote{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;align-items:center;background:var(--chip);border-radius:20px;padding:36px}
+.story-quote .figure{font-family:var(--display);font-weight:900;font-size:clamp(44px,6vw,64px);line-height:1;color:var(--brand-text)}
+.story-quote .figure small{display:block;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.story-quote p{font-size:19px;font-style:italic}
+
+/* catalog */
+.catalog{background:var(--surface);border-block:1px solid var(--line)}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.product{display:flex;flex-direction:column;gap:18px;border:2px solid var(--fg);border-radius:22px;padding:30px;background:var(--bg);min-width:0}
+.product-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:14px}
+.product-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.tag{font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.tag-aroma{background:var(--fg);color:var(--bg)}
+.tag-food{background:var(--gold);color:#1B1400}
+.product h3{font-weight:900;font-size:30px;line-height:1.05}
+.product h3 span{display:block;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.uses{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.uses li{font-family:var(--display);font-weight:600;font-size:13px;background:var(--chip);border-radius:999px;padding:6px 14px}
+.spec{border:2px solid var(--fg);border-radius:14px;overflow:hidden}
+.spec-head{display:flex;justify-content:space-between;gap:12px;background:var(--fg);color:var(--bg);padding:10px 18px;font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.spec dl{margin:0;padding:4px 18px 8px}
+.spec .row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:15px}
+.spec .row:last-child{border-bottom:0}
+.spec dt{font-weight:700}
+.spec dd{margin:0;font-weight:500;font-variant-numeric:tabular-nums;text-align:right}
+.note{font-size:14px;color:var(--muted);line-height:1.55}
+.note strong{color:var(--fg)}
+.product .btn{align-self:flex-start;background:var(--brand);color:#FFFFFF;margin-top:auto}
+.product .btn:hover{filter:brightness(1.08)}
+
+/* quality */
+.quality-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.q{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:16px;background:var(--chip);min-width:0}
+.q b{font-family:var(--display);font-weight:900;font-size:24px;color:var(--brand-text);font-variant-numeric:tabular-nums}
+.q span{font-family:var(--display);font-weight:600;font-size:13px;color:var(--muted)}
+.lab{margin-top:20px;font-size:14px;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--forest);color:var(--forest-fg)}
+.contact .section-head p{color:#DCE6D3}
+.contact .eyebrow{color:var(--gold)}
+.contact h2{color:#FFFFFF}
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.c-card{display:flex;flex-direction:column;gap:6px;border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:22px;min-width:0}
+.c-card span{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.wa{align-self:flex-start;margin-top:6px;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--gold);color:#1B1400;font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none}
+.wa:hover{background:#F5D158}
+.c-card p{font-family:var(--display);font-weight:600;font-size:17px;overflow-wrap:anywhere;user-select:all;color:#FFFFFF}
+
+/* footer */
+footer{padding-block:36px;background:var(--bg)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{width:96px;height:auto}
+footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:48px 40px}
+  .hero-art{order:-1}
+  .hero-art img{max-width:560px}
+  .story-layout{grid-template-columns:minmax(0,1fr)}
+  .story-aside{position:static}
+  .story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .products{grid-template-columns:minmax(0,1fr)}
+  .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .story-quote{grid-template-columns:minmax(0,1fr)}
+  .contact-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  section{padding-block:56px}
+  .story-grid{grid-template-columns:minmax(0,1fr)}
+  .nav{gap:14px;font-size:13px}
+  .product{padding:22px}
+  .story-quote{padding:24px}
+}
+</style>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" aria-label="Productos Ruffo, home"><img class="logo" src="ruffo-logo.png" alt="Ruffo" width="900" height="417"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#quality">Quality</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">From the Venezuelan Amazon</p>
+        <h1>Tonka <span>Beans</span></h1>
+        <p class="sub">Whole dried seeds</p>
+        <span class="sci">Dipteryx odorata</span>
+        <p class="harvest-badge"><b>Now selling: 2026 harvest</b><span>We only sell our most recent batch</span></p>
+        <p class="lede">Gathered by hand from the rainforest floor of southern Venezuela, then carefully dehydrated, selected and exported by Productos Ruffo.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="#catalog">See the catalog</a>
+          <a class="btn btn-ghost" href="#story">Our story</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="ruffo-doypacks.jpg" alt="Two kraft doypacks of Ruffo Tonka Beans, aromatic use and culinary use, beside a pile of brown tonka beans" width="1536" height="1024">
+      </div>
+    </div>
+  </div>
+  <div class="waves-band" aria-hidden="true">
+    <svg class="waves" viewBox="0 0 1200 46" preserveAspectRatio="none">
+      <rect width="1200" height="46" style="fill:var(--bg)"></rect>
+      <path d="M0,10 C50,0 100,0 150,10 C200,20 250,20 300,10 C350,0 400,0 450,10 C500,20 550,20 600,10 C650,0 700,0 750,10 C800,20 850,20 900,10 C950,0 1000,0 1050,10 C1100,20 1150,20 1200,10 V0 H0 Z" style="fill:var(--forest)"></path>
+      <path d="M100,26 C140,18 180,18 220,26 C260,34 300,34 340,26 C380,18 420,18 460,26 C500,34 540,34 580,26 C620,18 660,18 700,26 C740,34 780,34 820,26 C860,18 900,18 940,26 C980,34 1020,34 1060,26 C1080,22 1090,21 1100,22" fill="none" style="stroke:var(--gold)" stroke-width="5" stroke-linecap="round"></path>
+      <path d="M40,38 C80,30 120,30 160,38 C200,46 240,46 280,38 C320,30 360,30 400,38 C440,46 480,46 520,38 C560,30 600,30 640,38 C680,46 720,46 760,38 C800,30 840,30 880,38 C920,46 960,46 1000,38 C1040,30 1080,30 1120,38 C1140,42 1150,42 1160,40" fill="none" style="stroke:var(--leaf)" stroke-width="5" stroke-linecap="round"></path>
+    </svg>
+  </div>
+
+  <section id="story">
+    <div class="wrap">
+      <div class="story-layout">
+        <div class="story-aside">
+          <p class="eyebrow">Our story</p>
+          <h2>A seed the forest gives <em>once a year</em></h2>
+          <img src="tonka-beans.png" alt="Line drawing of two tonka beans" width="900" height="527">
+        </div>
+        <div class="chapters">
+          <article class="chapter">
+            <p class="kicker">The forest</p>
+            <h3>Wild trees of the Venezuelan Amazon</h3>
+            <p>The tonka tree, <i>Dipteryx odorata</i>, grows wild in the rainforest of southern Venezuela. Each season its fruit ripens and falls to the forest floor. Inside every fruit is a single long, wrinkled seed with a warm scent of vanilla, almond and cinnamon: the tonka bean.</p>
+          </article>
+          <svg class="chapter-wave" viewBox="0 0 140 18" aria-hidden="true"><path d="M3,9 C14,1 25,1 36,9 C47,17 58,17 69,9 C80,1 91,1 102,9 C113,17 124,17 137,9" fill="none" style="stroke:var(--gold)" stroke-width="4" stroke-linecap="round"></path></svg>
+          <article class="chapter">
+            <p class="kicker">The harvest</p>
+            <h3>Gathered by hand, one fruit at a time</h3>
+            <p>The harvest comes once a year. Local gatherers walk the forest and pick up the fallen fruit by hand. No trees are felled, and the forest stays standing. Each hard shell is cracked open to free its seed, and only whole, sound beans are kept.</p>
+          </article>
+          <svg class="chapter-wave" viewBox="0 0 140 18" aria-hidden="true"><path d="M3,9 C14,1 25,1 36,9 C47,17 58,17 69,9 C80,1 91,1 102,9 C113,17 124,17 137,9" fill="none" style="stroke:var(--leaf)" stroke-width="4" stroke-linecap="round"></path></svg>
+          <article class="chapter">
+            <p class="kicker">Productos Ruffo</p>
+            <h3>Dried, tested and sent abroad</h3>
+            <p>At Productos Ruffo we dehydrate the beans slowly to a stable moisture level, which protects the seed and concentrates its aroma. Every lot is lab-tested, packed in kraft doypacks in Venezuela and exported to buyers abroad, from perfumers and chandlers to pastry kitchens.</p>
+          </article>
+        </div>
+      </div>
+      <div class="story-quote">
+        <p class="figure">8.17%<small>Moisture, lab-verified</small></p>
+        <p>Dry enough to keep, rich enough to perfume a room. Our beans are tested by the Institute of Food Science and Technology of the Central University of Venezuela before they leave the country.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="catalog">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Catalog</p>
+        <h2>One bean, two grades</h2>
+        <p>The same hand-gathered tonka bean, prepared and labelled for two different uses. Choose the grade that fits your product and your market.</p>
+      </div>
+      <div class="fresh">
+        <b>Harvest 2026</b>
+        <span>We harvest once a year and only sell the most recent batch. Every order ships from the 2026 harvest.</span>
+      </div>
+      <div class="products">
+        <article class="product">
+          <img class="product-img" src="pouch-aromatic.jpg" alt="Ruffo Tonka Beans doypack, aromatic use" width="450" height="675">
+          <div class="product-top">
+            <span class="tag tag-aroma">Aromatic use</span>
+          </div>
+          <h3>Tonka Beans<span>Aromatic grade · Whole dried seeds</span></h3>
+          <p>For fragrance, home and craft. The beans release their sweet, vanilla-like scent slowly, so they last in sachets, drawers and potpourri.</p>
+          <ul class="uses" aria-label="Typical uses">
+            <li>Perfumery</li><li>Candles</li><li>Potpourri</li><li>Sachets</li><li>Soap making</li>
+          </ul>
+          <div class="spec">
+            <div class="spec-head"><span>Technical data</span><span>Per sample</span></div>
+            <dl>
+              <div class="row"><dt>Moisture</dt><dd>8.17 %</dd></div>
+              <div class="row"><dt>Ash</dt><dd>3.68 %</dd></div>
+              <div class="row"><dt>Density</dt><dd>0.8873 g/ml</dd></div>
+              <div class="row"><dt>Weight of 100 beans</dt><dd>270.0 g</dd></div>
+              <div class="row"><dt>Salmonella spp. (25 g)</dt><dd>Absent</dd></div>
+            </dl>
+          </div>
+          <p class="note"><strong>Not for human consumption.</strong> This is the grade we supply to the United States.</p>
+          <a class="btn" href="#contact">Request a quote</a>
+        </article>
+
+        <article class="product">
+          <img class="product-img" src="pouch-culinary.jpg" alt="Ruffo Tonka Beans doypack, culinary use" width="450" height="675">
+          <div class="product-top">
+            <span class="tag tag-food">Food use · Spice</span>
+          </div>
+          <h3>Tonka Beans<span>Culinary grade · Whole dried seeds</span></h3>
+          <p>A spice for chefs and pastry kitchens. Grate a small amount over desserts, creams, chocolate and ice cream, as you would nutmeg.</p>
+          <ul class="uses" aria-label="Typical uses">
+            <li>Pastry</li><li>Chocolate</li><li>Ice cream</li><li>Creams</li><li>Baking</li>
+          </ul>
+          <div class="spec">
+            <div class="spec-head"><span>Nutrition</span><span>Per 100 g</span></div>
+            <dl>
+              <div class="row"><dt>Energy</dt><dd>499 kcal</dd></div>
+              <div class="row"><dt>Fat</dt><dd>29.19 g</dd></div>
+              <div class="row"><dt>Carbohydrates</dt><dd>44.76 g</dd></div>
+              <div class="row"><dt>Protein</dt><dd>14.21 g</dd></div>
+              <div class="row"><dt>Sodium</dt><dd>15.74 mg</dd></div>
+            </dl>
+          </div>
+          <p class="note"><strong>Available for markets where tonka beans are permitted as a food ingredient</strong>, such as the European Union. Use sparingly. Not sold as food in the United States.</p>
+          <a class="btn" href="#contact">Request a quote</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quality">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Quality</p>
+        <h2>Tested before it travels</h2>
+        <p>Microbiological results for our dried tonka beans. Every count came in below 10 colony-forming units per gram, far under the accepted limits.</p>
+      </div>
+      <div class="quality-grid">
+        <div class="q"><b>&lt;10</b><span>Aerobic bacteria, CFU/g</span></div>
+        <div class="q"><b>&lt;10</b><span>Total coliforms, CFU/g</span></div>
+        <div class="q"><b>&lt;10</b><span>Molds, CFU/g</span></div>
+        <div class="q"><b>&lt;10</b><span>Yeasts, CFU/g</span></div>
+        <div class="q"><b>Absent</b><span>Salmonella in 25 g</span></div>
+      </div>
+      <p class="lab">Source: Central University of Venezuela (UCV), Faculty of Sciences, Institute of Food Science and Technology. Report No. TA-399-2026, October 13, 2026. Sanitary registration No. A-145.537.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Order tonka beans from the source</h2>
+        <p>We sell to importers, distributors, perfumers and food businesses. Write to us with the grade, quantity and destination country, and we will reply with pack sizes, pricing and shipping options.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="c-card"><span>Email</span><p>ruffo@productosruffo.com</p></div>
+        <div class="c-card"><span>Phone / WhatsApp</span><p>+58 412 116 1668</p><a class="wa" href="https://wa.me/584121161668" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+        <div class="c-card"><span>Based in</span><p>Venezuela</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="ruffo-logo.png" alt="Ruffo" width="900" height="417">
+    <p>Productos Ruffo, C.A. · RIF J-406717231 · Sanitary Reg. A-145.537 · Made in Venezuela</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -385,6 +385,8 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
       <form class="contact-form" id="contact-form" action="https://formsubmit.co/ruffo@productosruffo.com" method="POST" novalidate>
         <input type="hidden" name="_subject" value="New inquiry from productosruffo.com">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.productosruffo.com/#contact">
+        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="f-grid">
           <div class="field">
@@ -450,10 +452,18 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
     btn.disabled=true;setStatus('Sending…');
     var data=new FormData(form);
     fetch('https://formsubmit.co/ajax/ruffo@productosruffo.com',{method:'POST',headers:{'Accept':'application/json'},body:data})
-      .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw new Error(j.message||'error');return j;});})
-      .then(function(){form.reset();setStatus('Thank you. We received your inquiry and will reply within two business days.','ok');})
-      .catch(function(){setStatus('Your message could not be sent. Please email ruffo@productosruffo.com or write to us on WhatsApp.','err');})
-      .then(function(){btn.disabled=false;});
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(res){
+        var msg=String((res.j&&res.j.message)||'');
+        if(res.ok && String(res.j.success)!=='false'){
+          form.reset();setStatus('Thank you. We received your inquiry and will reply within two business days.','ok');btn.disabled=false;
+        } else if(/activat/i.test(msg)){
+          setStatus('This form is waiting for activation by Productos Ruffo. Please email ruffo@productosruffo.com or write to us on WhatsApp for now.','err');btn.disabled=false;
+        } else {
+          form.submit();
+        }
+      })
+      .catch(function(){form.submit();});
   });
 })();
 </script>

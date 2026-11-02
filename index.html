@@ -162,6 +162,24 @@ section{padding-block:80px}
 .contact .section-head p{color:#DCE6D3}
 .contact .eyebrow{color:var(--gold)}
 .contact h2{color:#FFFFFF}
+.contact-form{background:#FFFFFF;color:#16220F;border-radius:22px;padding:32px;margin-bottom:28px;display:flex;flex-direction:column;gap:22px}
+.f-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field-wide{grid-column:1 / -1}
+.field label{font-family:var(--display);font-weight:700;font-size:14px;color:#16220F}
+.field label span{color:#0A6A00}
+.field label .opt{color:#4A5744;font-weight:500}
+.field input,.field textarea{font:inherit;font-family:var(--display);font-size:16px;color:#16220F;background:#FAFBF6;border:2px solid #C9D3C0;border-radius:12px;padding:12px 14px;min-height:48px;width:100%;box-sizing:border-box}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus,.field textarea:focus{outline:none;border-color:#109B00;box-shadow:0 0 0 3px rgba(16,155,0,.18)}
+.field input[aria-invalid="true"]{border-color:#B42318}
+.f-foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.f-foot .btn{cursor:pointer;border:0}
+.f-foot .btn[disabled]{opacity:.6;cursor:wait}
+.f-status{font-family:var(--display);font-weight:600;font-size:15px;color:#4A5744}
+.f-status.ok{color:#0A6A00}
+.f-status.err{color:#B42318}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .c-card{display:flex;flex-direction:column;gap:6px;border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:22px;min-width:0}
 .c-card span{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
@@ -186,6 +204,8 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .story-quote{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
+  .f-grid{grid-template-columns:minmax(0,1fr)}
+  .contact-form{padding:22px}
 }
 @media (max-width:520px){
   section{padding-block:56px}
@@ -360,8 +380,39 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
       <div class="section-head">
         <p class="eyebrow">Contact</p>
         <h2>Order tonka beans from the source</h2>
-        <p>We sell to importers, distributors, perfumers and food businesses. Write to us with the grade, quantity and destination country, and we will reply with pack sizes, pricing and shipping options.</p>
+        <p>We sell to importers, distributors, perfumers and food businesses. Send us your details and we will reply with pack sizes, pricing and shipping options.</p>
       </div>
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/ruffo@productosruffo.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New inquiry from productosruffo.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="f-grid">
+          <div class="field">
+            <label for="cf-name">Full name <span aria-hidden="true">*</span></label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-company">Company <span aria-hidden="true">*</span></label>
+            <input id="cf-company" name="company" type="text" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone <span aria-hidden="true">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field field-wide">
+            <label for="cf-message">Message <span class="opt">(optional)</span></label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Grade (aromatic or culinary), quantity and destination country"></textarea>
+          </div>
+        </div>
+        <div class="f-foot">
+          <button type="submit" class="btn btn-gold" id="cf-submit">Send inquiry</button>
+          <p class="f-status" id="cf-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
       <div class="contact-grid">
         <div class="c-card"><span>Email</span><p>ruffo@productosruffo.com</p></div>
         <div class="c-card"><span>Phone / WhatsApp</span><p>+58 412 116 1668</p><a class="wa" href="https://wa.me/584121161668" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
@@ -377,6 +428,35 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
     <p>Productos Ruffo, C.A. · RIF J-406717231 · Sanitary Reg. A-145.537 · Made in Venezuela</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var form=document.getElementById('contact-form');
+  if(!form) return;
+  var status=document.getElementById('cf-status');
+  var btn=document.getElementById('cf-submit');
+  function setStatus(msg,cls){status.textContent=msg;status.className='f-status'+(cls?' '+cls:'');}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=null;
+    ['cf-name','cf-company','cf-phone','cf-email'].forEach(function(id){
+      var el=document.getElementById(id);
+      var ok=el.value.trim()!=='' && (el.type!=='email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+      el.setAttribute('aria-invalid',ok?'false':'true');
+      if(!ok && !bad) bad=el;
+    });
+    if(bad){setStatus('Please fill in your name, company, phone and a valid email.','err');bad.focus();return;}
+    if(form.querySelector('.hp').value){return;}
+    btn.disabled=true;setStatus('Sending…');
+    var data=new FormData(form);
+    fetch('https://formsubmit.co/ajax/ruffo@productosruffo.com',{method:'POST',headers:{'Accept':'application/json'},body:data})
+      .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw new Error(j.message||'error');return j;});})
+      .then(function(){form.reset();setStatus('Thank you. We received your inquiry and will reply within two business days.','ok');})
+      .catch(function(){setStatus('Your message could not be sent. Please email ruffo@productosruffo.com or write to us on WhatsApp.','err');})
+      .then(function(){btn.disabled=false;});
+  });
+})();
+</script>
 
 </body>
 </html>

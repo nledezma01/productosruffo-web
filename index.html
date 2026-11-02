@@ -180,7 +180,7 @@ section{padding-block:80px}
 .f-status.ok{color:#0A6A00}
 .f-status.err{color:#B42318}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .c-card{display:flex;flex-direction:column;gap:6px;border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:22px;min-width:0}
 .c-card span{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .wa{align-self:flex-start;margin-top:6px;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--gold);color:#1B1400;font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none}
@@ -417,7 +417,6 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
       </form>
       <div class="contact-grid">
         <div class="c-card"><span>Email</span><p>ruffo@productosruffo.com</p></div>
-        <div class="c-card"><span>Phone / WhatsApp</span><p>+58 412 116 1668</p><a class="wa" href="https://wa.me/584121161668" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
         <div class="c-card"><span>Based in</span><p>Venezuela</p></div>
       </div>
     </div>
@@ -458,7 +457,7 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
         if(res.ok && String(res.j.success)!=='false'){
           form.reset();setStatus('Thank you. We received your inquiry and will reply within two business days.','ok');btn.disabled=false;
         } else if(/activat/i.test(msg)){
-          setStatus('This form is waiting for activation by Productos Ruffo. Please email ruffo@productosruffo.com or write to us on WhatsApp for now.','err');btn.disabled=false;
+          setStatus('This form is waiting for activation by Productos Ruffo. Please email ruffo@productosruffo.com for now.','err');btn.disabled=false;
         } else {
           form.submit();
         }

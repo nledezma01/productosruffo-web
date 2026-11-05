@@ -137,10 +137,13 @@ section{padding-block:80px}
 .catalog{background:var(--surface);border-block:1px solid var(--line)}
 .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .cat-title{font-weight:900;font-size:clamp(24px,3vw,32px);margin:0 0 16px}
-.products + .cat-title{margin-top:64px}
+.products + .cat-title,.product-wide + .cat-title{margin-top:64px}
 .product.product-wide{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:36px;align-items:center}
 .product-wide .product-img{aspect-ratio:3/2;height:auto}
 .product-body{display:flex;flex-direction:column;gap:18px;min-width:0}
+.products-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.product-img.pack-img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#ECECEC}
+.case-note{margin-top:16px}
 .tag-fruit{background:var(--brand);color:#FFFFFF}
 .product{display:flex;flex-direction:column;gap:18px;border:2px solid var(--fg);border-radius:22px;padding:30px;background:var(--bg);min-width:0}
 .product-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:14px}
@@ -217,6 +220,7 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .products{grid-template-columns:minmax(0,1fr)}
   .product.product-wide{grid-template-columns:minmax(0,1fr)}
+  .products-3{grid-template-columns:minmax(0,1fr)}
   .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .story-quote{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
@@ -404,6 +408,66 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
           <a class="btn" href="#contact">Pre-order</a>
         </div>
       </article>
+
+      <h3 class="cat-title" id="dehydrated">Dehydrated Fruit</h3>
+      <div class="fresh">
+        <b>Pre-orders open</b>
+        <span>We are now taking orders for our dried mango, pineapple and papaya flakes.</span>
+      </div>
+      <div class="products products-3">
+        <article class="product">
+          <img class="product-img pack-img" src="dried-mango.jpg" alt="Ruffo Dried Mango bag, dehydrated mango flakes" width="720" height="720">
+          <div class="product-top">
+            <span class="tag tag-fruit">Dehydrated</span>
+          </div>
+          <h3>Dried Mango<span>Dehydrated mango flakes</span></h3>
+          <p>Sweet, chewy slices of ripe mango, dried to keep their color and flavor. A ready snack, or a topping for cereal, yogurt and baking.</p>
+          <div class="spec">
+            <div class="spec-head"><span>Pack size</span><span>Units per case</span></div>
+            <dl>
+              <div class="row"><dt>30 g bag</dt><dd>40 units · 1.2 kg</dd></div>
+              <div class="row"><dt>50 g bag</dt><dd>30 units · 1.5 kg</dd></div>
+              <div class="row"><dt>100 g bag</dt><dd>20 units · 2.0 kg</dd></div>
+            </dl>
+          </div>
+          <a class="btn" href="#contact">Pre-order</a>
+        </article>
+        <article class="product">
+          <img class="product-img pack-img" src="dried-pineapple.jpg" alt="Ruffo Dried Pineapple bag, dehydrated pineapple flakes" width="720" height="720">
+          <div class="product-top">
+            <span class="tag tag-fruit">Dehydrated</span>
+          </div>
+          <h3>Dried Pineapple<span>Dehydrated pineapple flakes</span></h3>
+          <p>Tangy-sweet pineapple pieces with a bright tropical taste. Good on their own, in trail mixes or in desserts.</p>
+          <div class="spec">
+            <div class="spec-head"><span>Pack size</span><span>Units per case</span></div>
+            <dl>
+              <div class="row"><dt>30 g bag</dt><dd>40 units · 1.2 kg</dd></div>
+              <div class="row"><dt>50 g bag</dt><dd>30 units · 1.5 kg</dd></div>
+              <div class="row"><dt>100 g bag</dt><dd>20 units · 2.0 kg</dd></div>
+            </dl>
+          </div>
+          <a class="btn" href="#contact">Pre-order</a>
+        </article>
+        <article class="product">
+          <img class="product-img pack-img" src="dried-papaya.jpg" alt="Ruffo Dried Papaya bag, dehydrated papaya flakes" width="720" height="720">
+          <div class="product-top">
+            <span class="tag tag-fruit">Dehydrated</span>
+          </div>
+          <h3>Dried Papaya<span>Dehydrated papaya flakes</span></h3>
+          <p>Soft, naturally sweet papaya flakes with a mild, honeyed flavor. A light snack and an easy addition to breakfasts and smoothies.</p>
+          <div class="spec">
+            <div class="spec-head"><span>Pack size</span><span>Units per case</span></div>
+            <dl>
+              <div class="row"><dt>30 g bag</dt><dd>40 units · 1.2 kg</dd></div>
+              <div class="row"><dt>50 g bag</dt><dd>30 units · 1.5 kg</dd></div>
+              <div class="row"><dt>100 g bag</dt><dd>20 units · 2.0 kg</dd></div>
+            </dl>
+          </div>
+          <a class="btn" href="#contact">Pre-order</a>
+        </article>
+      </div>
+      <p class="note case-note"><strong>Net product per case</strong> is shown after the unit count. Every case holds a single pack size.</p>
     </div>
   </section>
 

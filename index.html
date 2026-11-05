@@ -172,6 +172,7 @@ section{padding-block:80px}
 .tag-fruit{background:var(--brand);color:#FFFFFF}
 .product{display:flex;flex-direction:column;gap:18px;border:2px solid var(--fg);border-radius:22px;padding:30px;background:var(--bg);min-width:0}
 .product-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:14px}
+.products .product-img{height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 40%}
 .product-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
 .tag{font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
 .tag-aroma{background:var(--fg);color:var(--bg)}
@@ -247,7 +248,8 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .story-layout{grid-template-columns:minmax(0,1fr)}
   .story-aside{position:static}
   .story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .products{grid-template-columns:minmax(0,1fr)}
+  .products{gap:16px}
+  .products .product{padding:20px}
   .product.product-wide{grid-template-columns:minmax(0,1fr)}
   .dehy{padding:22px}
   .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -255,6 +257,9 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
   .f-grid{grid-template-columns:minmax(0,1fr)}
   .contact-form{padding:22px}
+}
+@media (max-width:600px){
+  .products{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:520px){
   .site-header .nav{order:3;width:100%;justify-content:space-between}

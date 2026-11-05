@@ -177,6 +177,10 @@ section{padding-block:80px}
 .product .btn:hover{filter:brightness(1.08)}
 
 /* quality */
+.tonka-quality{margin-top:44px;padding-top:36px;border-top:1px solid var(--line)}
+.quality-head{margin-bottom:24px}
+.q-title{font-weight:800;font-size:clamp(24px,3vw,32px);line-height:1.15}
+.tonka-quality + .cat-title{margin-top:64px}
 .quality-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .q{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:16px;background:var(--chip);min-width:0}
 .q b{font-family:var(--display);font-weight:900;font-size:24px;color:var(--brand-text);font-variant-numeric:tabular-nums}
@@ -391,6 +395,22 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
         </article>
       </div>
 
+      <div class="tonka-quality" id="quality">
+      <div class="section-head quality-head">
+        <p class="eyebrow">Quality</p>
+        <h3 class="q-title">Tested before it travels</h3>
+        <p>Microbiological results for our dried tonka beans. Every count came in below 10 colony-forming units per gram, far under the accepted limits.</p>
+      </div>
+      <div class="quality-grid">
+        <div class="q"><b>&lt;10</b><span>Aerobic bacteria, CFU/g</span></div>
+        <div class="q"><b>&lt;10</b><span>Total coliforms, CFU/g</span></div>
+        <div class="q"><b>&lt;10</b><span>Molds, CFU/g</span></div>
+        <div class="q"><b>&lt;10</b><span>Yeasts, CFU/g</span></div>
+        <div class="q"><b>Absent</b><span>Salmonella in 25 g</span></div>
+      </div>
+      <p class="lab">Source: Central University of Venezuela (UCV), Faculty of Sciences, Institute of Food Science and Technology. Report No. TA-399-2026, October 13, 2026. Sanitary registration No. A-145.537.</p>
+      </div>
+
       <h3 class="cat-title" id="papaya">Fresh Papaya</h3>
       <div class="fresh">
         <b>Pre-orders open: May 2027 harvest</b>
@@ -469,23 +489,6 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
     </div>
   </section>
 
-  <section id="quality">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Quality</p>
-        <h2>Tested before it travels</h2>
-        <p>Microbiological results for our dried tonka beans. Every count came in below 10 colony-forming units per gram, far under the accepted limits.</p>
-      </div>
-      <div class="quality-grid">
-        <div class="q"><b>&lt;10</b><span>Aerobic bacteria, CFU/g</span></div>
-        <div class="q"><b>&lt;10</b><span>Total coliforms, CFU/g</span></div>
-        <div class="q"><b>&lt;10</b><span>Molds, CFU/g</span></div>
-        <div class="q"><b>&lt;10</b><span>Yeasts, CFU/g</span></div>
-        <div class="q"><b>Absent</b><span>Salmonella in 25 g</span></div>
-      </div>
-      <p class="lab">Source: Central University of Venezuela (UCV), Faculty of Sciences, Institute of Food Science and Technology. Report No. TA-399-2026, October 13, 2026. Sanitary registration No. A-145.537.</p>
-    </div>
-  </section>
 
   <section id="contact" class="contact">
     <div class="wrap">

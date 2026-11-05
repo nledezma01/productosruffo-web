@@ -141,10 +141,18 @@ section{padding-block:80px}
 .product.product-wide{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:36px;align-items:center}
 .product-wide .product-img{aspect-ratio:3/2;height:auto}
 .product-body{display:flex;flex-direction:column;gap:18px;min-width:0}
-.products-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.dehy{border:2px solid var(--fg);border-radius:22px;padding:30px;background:var(--bg);display:flex;flex-direction:column;gap:28px}
+.dehy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dehy-item{margin:0;display:flex;flex-direction:column;gap:12px;min-width:0}
+.dehy-img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#ECECEC;border-radius:14px}
+.dehy-item figcaption{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.dehy-item h4{margin:0;font-family:var(--display);font-weight:900;font-size:22px}
+.dehy-sub{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dehy-info{display:flex;flex-direction:column;gap:18px;max-width:640px}
+.dehy-info .btn{align-self:flex-start;background:var(--brand);color:#FFFFFF}
 .product-img.pack-img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#ECECEC}
 .case-note{margin-top:16px}
-.avail{align-self:flex-start;font-family:var(--display);font-weight:800;font-size:14px;color:var(--brand-text);border:2px solid var(--brand);border-radius:999px;padding:5px 14px;margin-top:-6px}
+.avail{display:inline-block;align-self:flex-start;font-family:var(--display);font-weight:800;font-size:14px;color:var(--brand-text);border:2px solid var(--brand);border-radius:999px;padding:5px 14px;margin-top:4px}
 .tag-fruit{background:var(--brand);color:#FFFFFF}
 .product{display:flex;flex-direction:column;gap:18px;border:2px solid var(--fg);border-radius:22px;padding:30px;background:var(--bg);min-width:0}
 .product-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:14px}
@@ -221,7 +229,7 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .products{grid-template-columns:minmax(0,1fr)}
   .product.product-wide{grid-template-columns:minmax(0,1fr)}
-  .products-3{grid-template-columns:minmax(0,1fr)}
+  .dehy{padding:22px}
   .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .story-quote{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
@@ -229,6 +237,8 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .contact-form{padding:22px}
 }
 @media (max-width:520px){
+  .dehy-grid{grid-template-columns:minmax(0,1fr)}
+  .dehy-img{max-width:340px}
   section{padding-block:56px}
   .story-grid{grid-template-columns:minmax(0,1fr)}
   .nav{gap:14px;font-size:13px}
@@ -415,63 +425,47 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
         <b>Pre-orders open</b>
         <span>Dried pineapple: February 2027 · Dried mango and dried papaya: May 2027</span>
       </div>
-      <div class="products products-3">
-        <article class="product">
-          <img class="product-img pack-img" src="dried-mango.jpg" alt="Ruffo Dried Mango bag, dehydrated mango flakes" width="720" height="720">
-          <div class="product-top">
-            <span class="tag tag-fruit">Dehydrated</span>
-          </div>
-          <h3>Dried Mango<span>Dehydrated mango flakes</span></h3>
-          <p class="avail">Available May 2027</p>
-          <p>Sweet, chewy slices of ripe mango, dried to keep their color and flavor. A ready snack, or a topping for cereal, yogurt and baking.</p>
+      <div class="dehy">
+        <div class="dehy-grid">
+          <figure class="dehy-item">
+            <img class="dehy-img" src="dried-mango.jpg" alt="Ruffo Dried Mango bag" width="720" height="720">
+            <figcaption>
+              <h4>Dried Mango</h4>
+              <span class="dehy-sub">Dehydrated mango flakes</span>
+              <span class="avail">Available May 2027</span>
+            </figcaption>
+          </figure>
+          <figure class="dehy-item">
+            <img class="dehy-img" src="dried-pineapple.jpg" alt="Ruffo Dried Pineapple bag" width="720" height="720">
+            <figcaption>
+              <h4>Dried Pineapple</h4>
+              <span class="dehy-sub">Dehydrated pineapple flakes</span>
+              <span class="avail">Available February 2027</span>
+            </figcaption>
+          </figure>
+          <figure class="dehy-item">
+            <img class="dehy-img" src="dried-papaya.jpg" alt="Ruffo Dried Papaya bag" width="720" height="720">
+            <figcaption>
+              <h4>Dried Papaya</h4>
+              <span class="dehy-sub">Dehydrated papaya flakes</span>
+              <span class="avail">Available May 2027</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="dehy-info">
+          <p>Naturally sweet tropical fruit, sliced and dried. A ready snack, a topping for cereal and yogurt, or an ingredient for baking and trail mixes. All three flavors come in the same pack sizes and cases.</p>
           <div class="spec">
-            <div class="spec-head"><span>Pack size</span><span>Units per case</span></div>
+            <div class="spec-head"><span>Pack sizes · all flavors</span><span>Units per case</span></div>
             <dl>
               <div class="row"><dt>30 g bag</dt><dd>40 units · 1.2 kg</dd></div>
               <div class="row"><dt>50 g bag</dt><dd>30 units · 1.5 kg</dd></div>
               <div class="row"><dt>100 g bag</dt><dd>20 units · 2.0 kg</dd></div>
             </dl>
           </div>
+          <p class="note"><strong>Net product per case</strong> is shown after the unit count. Every case holds a single pack size.</p>
           <a class="btn" href="#contact">Pre-order</a>
-        </article>
-        <article class="product">
-          <img class="product-img pack-img" src="dried-pineapple.jpg" alt="Ruffo Dried Pineapple bag, dehydrated pineapple flakes" width="720" height="720">
-          <div class="product-top">
-            <span class="tag tag-fruit">Dehydrated</span>
-          </div>
-          <h3>Dried Pineapple<span>Dehydrated pineapple flakes</span></h3>
-          <p class="avail">Available February 2027</p>
-          <p>Tangy-sweet pineapple pieces with a bright tropical taste. Good on their own, in trail mixes or in desserts.</p>
-          <div class="spec">
-            <div class="spec-head"><span>Pack size</span><span>Units per case</span></div>
-            <dl>
-              <div class="row"><dt>30 g bag</dt><dd>40 units · 1.2 kg</dd></div>
-              <div class="row"><dt>50 g bag</dt><dd>30 units · 1.5 kg</dd></div>
-              <div class="row"><dt>100 g bag</dt><dd>20 units · 2.0 kg</dd></div>
-            </dl>
-          </div>
-          <a class="btn" href="#contact">Pre-order</a>
-        </article>
-        <article class="product">
-          <img class="product-img pack-img" src="dried-papaya.jpg" alt="Ruffo Dried Papaya bag, dehydrated papaya flakes" width="720" height="720">
-          <div class="product-top">
-            <span class="tag tag-fruit">Dehydrated</span>
-          </div>
-          <h3>Dried Papaya<span>Dehydrated papaya flakes</span></h3>
-          <p class="avail">Available May 2027</p>
-          <p>Soft, naturally sweet papaya flakes with a mild, honeyed flavor. A light snack and an easy addition to breakfasts and smoothies.</p>
-          <div class="spec">
-            <div class="spec-head"><span>Pack size</span><span>Units per case</span></div>
-            <dl>
-              <div class="row"><dt>30 g bag</dt><dd>40 units · 1.2 kg</dd></div>
-              <div class="row"><dt>50 g bag</dt><dd>30 units · 1.5 kg</dd></div>
-              <div class="row"><dt>100 g bag</dt><dd>20 units · 2.0 kg</dd></div>
-            </dl>
-          </div>
-          <a class="btn" href="#contact">Pre-order</a>
-        </article>
+        </div>
       </div>
-      <p class="note case-note"><strong>Net product per case</strong> is shown after the unit count. Every case holds a single pack size.</p>
     </div>
   </section>
 

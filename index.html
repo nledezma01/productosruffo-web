@@ -130,6 +130,12 @@ section{padding-block:80px}
 /* catalog */
 .catalog{background:var(--surface);border-block:1px solid var(--line)}
 .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.cat-title{font-weight:900;font-size:clamp(24px,3vw,32px);margin:0 0 16px}
+.products + .cat-title{margin-top:64px}
+.product.product-wide{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:36px;align-items:center}
+.product-wide .product-img{aspect-ratio:3/2;height:auto}
+.product-body{display:flex;flex-direction:column;gap:18px;min-width:0}
+.tag-fruit{background:var(--brand);color:#FFFFFF}
 .product{display:flex;flex-direction:column;gap:18px;border:2px solid var(--fg);border-radius:22px;padding:30px;background:var(--bg);min-width:0}
 .product-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:14px}
 .product-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
@@ -203,6 +209,7 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
   .story-aside{position:static}
   .story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .products{grid-template-columns:minmax(0,1fr)}
+  .product.product-wide{grid-template-columns:minmax(0,1fr)}
   .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .story-quote{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
@@ -301,9 +308,10 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Catalog</p>
-        <h2>One bean, two grades</h2>
-        <p>The same hand-gathered tonka bean, prepared and labelled for two different uses. Choose the grade that fits your product and your market.</p>
+        <h2>From the forest and the field</h2>
+        <p>Hand-gathered tonka beans in two grades, and fresh Red Lady papaya packed in export cartons. Choose what fits your product and your market.</p>
       </div>
+      <h3 class="cat-title">Tonka Beans</h3>
       <div class="fresh">
         <b>Harvest 2026</b>
         <span>We harvest once a year and only sell the most recent batch. Every order ships from the 2026 harvest.</span>
@@ -357,6 +365,35 @@ footer p{font-family:var(--display);font-size:13px;color:var(--muted)}
           <a class="btn" href="#contact">Request a quote</a>
         </article>
       </div>
+
+      <h3 class="cat-title" id="papaya">Fresh Papaya</h3>
+      <div class="fresh">
+        <b>Pre-orders open: May 2027 harvest</b>
+        <span>We are now taking orders for the May 2027 papaya harvest.</span>
+      </div>
+      <article class="product product-wide">
+        <img class="product-img" src="papaya-red-lady.jpg" alt="Red Lady papayas, one cut in half showing red-orange flesh, beside an export carton" width="1536" height="1024">
+        <div class="product-body">
+          <div class="product-top">
+            <span class="tag tag-fruit">Fresh fruit</span>
+          </div>
+          <h3>Papaya Red Lady<span>Fresh papaya · 35 lb export cartons</span></h3>
+          <p>A large, elongated papaya with deep red-orange flesh and a sweet, fragrant taste. Each fruit weighs about 1.3 to 2.3 kg. We pack it by count in 35 lb (15.9 kg) export cartons.</p>
+          <div class="spec">
+            <div class="spec-head"><span>Carton counts</span><span>35 lb · 15.9 kg</span></div>
+            <dl>
+              <div class="row"><dt>Count 7</dt><dd>~2.3 kg per fruit</dd></div>
+              <div class="row"><dt>Count 8</dt><dd>~2.0 kg per fruit</dd></div>
+              <div class="row"><dt>Count 9</dt><dd>~1.8 kg per fruit</dd></div>
+              <div class="row"><dt>Count 10</dt><dd>~1.6 kg per fruit</dd></div>
+              <div class="row"><dt>Count 11</dt><dd>~1.4 kg per fruit</dd></div>
+              <div class="row"><dt>Count 12</dt><dd>~1.3 kg per fruit</dd></div>
+            </dl>
+          </div>
+          <p class="note"><strong>Count = fruits per carton.</strong> Average fruit weight is the carton weight divided by the count. Shipping depends on the import rules of the destination country.</p>
+          <a class="btn" href="#contact">Pre-order</a>
+        </div>
+      </article>
     </div>
   </section>
 
